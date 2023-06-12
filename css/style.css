@@ -7,6 +7,7 @@
 @import "./utilidades/componentes.css";
 /* home */
 @import "/css/home/introducao.css";
+@import "/css/home/tecnologia.css";
 
 /* bicicletas */
 @import "/css/bicicletas/bicicletas-lista.css";
