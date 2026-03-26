@@ -35,9 +35,9 @@ reveals.forEach(el => revealObserver.observe(el));
 // ── GALERIA MODAL ──
 const galleryImages = [
   'img/robo-autonomo/image.png',
-  'img/robo-autonomo/image copy.png',
-  'img/robo-autonomo/image copy 2.png',
-  'img/robo-autonomo/image copy 3.png'
+  'img/robo-autonomo/image_copy.png',
+  'img/robo-autonomo/image_copy_2.png',
+  'img/robo-autonomo/image_copy_3.png'
 ];
 let currentSlide = 0;
 
