@@ -98,6 +98,10 @@
         <div class="skill-icon">🎨</div>
         <div class="skill-name">Figma</div>
       </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon">🐳</div>
+        <div class="skill-name">Docker</div>
+      </div>
     </div>
   </div>
 </section>
@@ -210,6 +214,32 @@
           <span class="tag">Jinja2</span>
         </div>
       </div>
+
+      <div class="project-card reveal">
+        <div class="project-card-top">
+          <div class="project-folder">
+            <svg width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2a1 1 0 0 1 1 1v1.07A7.001 7.001 0 0 1 19 11v8a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-8a7.001 7.001 0 0 1 6-6.93V3a1 1 0 0 1 1-1zm0 4a5 5 0 0 0-5 5v8h10v-8a5 5 0 0 0-5-5zm-3 7a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm6 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm-3 3a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+            </svg>
+          </div>
+          <div class="project-links">
+            <button onclick="openGallery()" class="project-link" title="Ver Galeria" style="border:none;cursor:pointer;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22 16V4c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2zm-11-4l2.03 2.71L16 11l4 5H8l3-4zM2 6v14c0 1.1.9 2 2 2h14v-2H4V6H2z"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="project-name">Robô Autônomo</div>
+        <div class="project-desc">Sistema de controle e navegação para robô autônomo baseado em Raspberry Pi 4, utilizando visão computacional para detecção de trajetórias, telemetria via MQTT e integração serial com ESP32.</div>
+        <div class="project-tags">
+          <span class="tag">Python</span>
+          <span class="tag">OpenCV</span>
+          <span class="tag">MQTT</span>
+          <span class="tag">Raspberry Pi</span>
+          <span class="tag">C/C++</span>
+        </div>
+      </div>
+
+
       <!--<div class="project-placeholder reveal">
         <div class="placeholder-icon">＋</div>
         <div class="placeholder-label">Projeto em breve</div>
@@ -267,6 +297,34 @@
   <div class="footer-copy">© 2025 Robson Macedo</div>
   <a href="#hero" class="footer-back">↑ Voltar ao topo</a>
 </footer>
+
+<!-- GALERIA MODAL -->
+<div class="gallery-overlay" id="galleryOverlay" onclick="closeGallery(event)">
+  <div class="gallery-modal">
+    <button class="gallery-close" onclick="closeGallery(event)" title="Fechar">✕</button>
+    <div class="gallery-header">
+      <div class="gallery-title">Robô Autônomo</div>
+      <div class="gallery-counter"><span id="galleryIndex">1</span> / <span id="galleryTotal">4</span></div>
+    </div>
+    <div class="gallery-viewport">
+      <button class="gallery-arrow gallery-prev" onclick="changeSlide(-1, event)" title="Anterior">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+      </button>
+      <div class="gallery-img-wrap">
+        <img id="galleryImg" src="img/robo-autonomo/image.png" alt="Robô Autônomo" />
+      </div>
+      <button class="gallery-arrow gallery-next" onclick="changeSlide(1, event)" title="Próximo">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      </button>
+    </div>
+    <div class="gallery-thumbs" id="galleryThumbs">
+      <img src="img/robo-autonomo/image.png" alt="Foto 1" class="gallery-thumb active" onclick="goToSlide(0, event)" />
+      <img src="img/robo-autonomo/image copy.png" alt="Foto 2" class="gallery-thumb" onclick="goToSlide(1, event)" />
+      <img src="img/robo-autonomo/image copy 2.png" alt="Foto 3" class="gallery-thumb" onclick="goToSlide(2, event)" />
+      <img src="img/robo-autonomo/image copy 3.png" alt="Foto 4" class="gallery-thumb" onclick="goToSlide(3, event)" />
+    </div>
+  </div>
+</div>
 
 <script src="main.js"></script>
 </body>
